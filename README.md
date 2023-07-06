@@ -22,4 +22,4 @@ Only .obj format is supported
 | Control  | Action     |
 |------------|-----------------|
 | W/A/S/D    | Move camera     |
-| Arrow Keys | Rotation Camera |
+| Arrow Keys | Rotate Camera |
