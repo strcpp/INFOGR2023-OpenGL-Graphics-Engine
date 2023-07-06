@@ -1,0 +1,37 @@
+﻿If you have a discrete NVIDIA or AMD GPU and an integrated Intel GPU, it is
+possible that the slower Intel GPU is used by default. Everything should still
+work, just not as fast as it could be.
+
+You can check which GPU is being used with the code:
+	Console.WriteLine(GL.GetString(StringName.Renderer));
+
+There are different ways to use the discrete GPU instead. Here's one way that
+should work on Windows:
+
+	1. Ensure that the .NET 5.0 Runtime is installed
+		a. Menu: Tools > Get Tools and Features...
+		b. Select the tab: Individual components
+		c. Select the feature: .NET > .NET 5.0 Runtime
+		d. Click on the button Modify and complete the installation
+	2. Install nvpatch <https://www.nuget.org/packages/Topten.nvpatch/>
+		a. Menu: Tools > Command Line > Developer Command Prompt
+		b. Run the command: dotnet new tool-manifest
+		c. Run the command: dotnet tool install Topten.nvpatch
+	3. Enable the nvpatch post-build event
+		a. Menu: Project > [project name] Properties
+		b. Select the section: Build > Events
+		c. Ensure that the Post-build event box contains the following command
+			dotnet tool run nvpatch --enable "$(TargetDir)$(TargetName).exe"
+	4. Menu: Build > Rebuild Solution
+
+From now on, it should always use a discrete GPU if there is one.
+
+If the above instructions don't work, cause errors, or if you don't want to
+use your discrete GPU, you can simply disable the nvpatch post-build event:
+
+	1. Disable the nvpatch post-build event
+		a. Menu: Project > [project name] Properties
+		b. Select the section: Build > Events
+		c. Ensure that the nvpatch command in the Post-build event box has
+		   been removed or disabled by putting a keyword REM in front of it
+			REM dotnet tool run nvpatch ...
