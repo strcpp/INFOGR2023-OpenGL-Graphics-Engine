@@ -13,7 +13,7 @@ Only .obj format is supported
 * Camera Movement
 * Normal Mapping
 * Shadow Mapping
-* Render into framebuffer
+* Render into framebuffer (for potential post-processing)
 * MSAA
 * Skybox (Cube mapping, works with either six separate images or one "cross" image)
 * Environment Mapping (Reflection)
