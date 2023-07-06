@@ -7,6 +7,7 @@ OpenGL Graphics engine built for the [UU Graphics course](https://www.cs.uu.nl/d
 Only .obj format is supported
 
 ## Features
+* Scene graph
 * Phong shading (ambient, specular, diffuse)
 * Texturing
 * Camera Movement
