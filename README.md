@@ -1,4 +1,4 @@
-![Alt Text](https://s12.gifyu.com/images/SWMSZ.gif)
+![Alt Text](https://github.com/strcpp/INFOGR2023-OpenGL-Graphics-Engine/blob/master/demo.gif)
 
 ## About
 
