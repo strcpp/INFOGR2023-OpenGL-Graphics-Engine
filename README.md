@@ -19,6 +19,7 @@ Only .obj format is supported
 * Environment Mapping (Reflection)
 
 ## Controls
-| W/A/S/D    | Move camera     |
+| Control  | Action     |
 |------------|-----------------|
+| W/A/S/D    | Move camera     |
 | Arrow Keys | Rotation Camera |
